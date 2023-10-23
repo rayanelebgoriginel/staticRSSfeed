@@ -1,29 +1,70 @@
+@keyframes fall {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(110%);
+    opacity: 1;
+  }
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #000;
+  font-family: 'Chilanka', cursive; /* A fun, more stylized font */
+  background-color: #e1d5d8; /* Light pink background for contrast */
   color: #fff;
   margin: 0;
   padding: 0;
   display: block;
   width: 100%;
   height: 100%;
+  position: relative; /* Relative positioning for adding the falling balls */
+  overflow: hidden; /* Hide balls that go outside of the viewport */
+}
+
+/* Adding the falling balls */
+body::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #ff007f; /* Bright Pink */
+  border-radius: 50%;
+  top: -20px;
+  left: 10%;
+  animation: fall 5s linear infinite;
+  animation-delay: 1s;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffaf00; /* Bright Orange */
+  border-radius: 50%;
+  top: -25px;
+  left: 60%;
+  animation: fall 7s linear infinite;
+  animation-delay: 2s;
 }
 
 .container {
   max-width: 800px;
   width: 100%;
   height: auto;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
   box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5); /* A slight dark background to let content pop */
+  border-radius: 8px;
 }
 
 h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 40px;
   margin-bottom: 30px;
-  color: #fff;
-  text-shadow: 2px 2px 4px #000;
+  color: #ff007f; /* Bright Pink */
 }
 
 #filters {
@@ -39,10 +80,10 @@ h1 {
 
 .article {
   margin-bottom: 30px;
-  max-width: 600px;
+  max-width: 600px; 
   margin-left: auto;
   margin-right: auto;
-  background-color: #222;
+  background-color: #351f39; /* Dark Purple */
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -51,10 +92,9 @@ h1 {
 .article h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #fff;
-  text-shadow: 2px 2px 4px #000;
+  color: #ffb6c1; /* Light Pink */
   margin-top: -5px;
-  overflow-wrap: break-word;
+overflow-wrap: break-word;
 }
 
 .article p {
@@ -67,8 +107,7 @@ h1 {
   margin-bottom: 15px;
   font-size: 16px;
   line-height: 1.4;
-  color: #fff;
-  text-shadow: 2px 2px 4px #000;
+  color: #ffb6c1; /* Light Pink */
 }
 
 .article .read-more {
@@ -95,18 +134,17 @@ h1 {
 }
 
 .subtitle {
-  text-align: center;
+  text-align: center; /* Centrer le sous-titre */
   font-size: 24px;
   margin-bottom: 20px;
   color: #fff;
-  text-shadow: 2px 2px 4px #000;
 }
 
 .github-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #ffdd57; /* Gold */
   text-decoration: none;
   margin-top: 20px;
 }
@@ -128,6 +166,8 @@ h1 {
   margin: 8px;
 }
 
+
+
 .thumbnail {
   max-width: 100%;
   max-height: 300px;
@@ -141,10 +181,10 @@ h1 {
   background-color: #444;
   color: #fff;
   text-decoration: none;
-  padding: 2px 2px;
+  padding: 2px 2px; /* reduced padding to make the button smaller */
   border-radius: 4px;
   transition: background-color 0.3s ease;
-  margin-left: 5px;
+  margin-left: 5px; /* add some margin to the left to create space between the article link and the button */
 }
 
 .article .fact-check:hover {
@@ -156,15 +196,16 @@ h1 {
   box-shadow: 0 0 0 1px #fff, 0 0 0 2px #444;
 }
 
+
 @media (max-width: 768px) {
   h1 {
     font-size: 30px;
   }
 
   .article {
-    max-width: 100%;
+    max-width: 100%; 
   }
-
+  
   .article h2 {
     font-size: 20px;
   }
@@ -179,7 +220,10 @@ h1 {
   }
 }
 
-/* Styles pour les appareils mobiles */
+
+
+
+/* Mobile Styles */
 @media (max-width: 425px) {
   .container {
     padding: 10px;
@@ -198,7 +242,7 @@ h1 {
   .article {
     margin-bottom: 20px;
     padding: 15px;
-    max-width: 100%;
+	max-width: 100%;
   }
 
   .article h2 {
@@ -225,6 +269,7 @@ h1 {
   }
 }
 
+
 .progress-container {
   width: 100%;
   height: 20px;
@@ -240,61 +285,61 @@ h1 {
   transition: width 0.5s;
 }
 
+
 .keyword-inputs {
-  margin-bottom: 20px;
-  text-align: center;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .keyword-inputs label {
-  font-size: 16px;
-  margin-right: 10px;
+    font-size: 16px;
+    margin-right: 10px;
 }
 
 .keyword-inputs input {
-  width: 80%;
-  padding: 5px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  border: 1px solid #888;
-  background-color: #222;
-  color: #fff;
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #888;
+    background-color: #222;
+    color: #fff;
 }
 
 .keyword-inputs button {
-  padding: 7px 15px;
-  margin: 5px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007BFF;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.2s;
+    padding: 7px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff007f; /* Bright Pink */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .keyword-inputs button:hover {
-  background-color: #0056b3;
+    background-color: #ffaf00; /* Bright Orange */
 }
 
 .keyword-inputs button:active {
-  background-color: #003580;
+    background-color: #003580;
 }
 
 #article-counter {
-  text-align: center;
-  font-size: 14px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .fact-check img {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-  filter: grayscale(80%);
-  transition: filter 0.3s;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    filter: grayscale(80%); /* Makes the image black and white */
+    transition: filter 0.3s; /* Smooth transition for hover effect */
 }
 
-.fact-check:hover img,
-.fact-check:active img {
-  filter: grayscale(0%);
+.fact-check:hover img, .fact-check:active img {
+    filter: grayscale(0%); /* Reverts the image to its original colors on hover and click */
 }
