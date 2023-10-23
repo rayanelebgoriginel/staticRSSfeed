@@ -1,112 +1,32 @@
-@keyframes fall {
-  0% {
-    transform: translateY(-10%);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(110%);
-    opacity: 0.8;
-  }
-}
-
-
 body {
-  font-family: 'Chilanka', cursive; /* A fun, more stylized font */
-  background-color: #e1d5d8; /* Light pink background for contrast */
-  color: #fff;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #D100D1; /* Neon Purple */
   margin: 0;
   padding: 0;
   display: block;
   width: 100%;
   height: 100%;
-  position: relative; /* Relative positioning for adding the falling balls */
-  overflow: hidden; /* Hide balls that go outside of the viewport */
-  overflow-x: hidden; 
-  overflow-y: auto; 
-}
-
-/* Adding the falling balls */
-body::before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: #ff007f; /* Bright Pink */
-  border-radius: 50%;
-  top: -20px;
-  left: 10%;
-  animation: fall 5s linear infinite;
-  animation-delay: 1s;
-}
-
-body::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #ffaf00; /* Bright Orange */
-  border-radius: 50%;
-  top: -25px;
-  left: 60%;
-  animation: fall 7s linear infinite;
-  animation-delay: 2s;
-}
-
-body::before:nth-child(2) {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  background-color: #003580;
-  border-radius: 50%;
-  top: -22px;
-  left: 30%;
-  animation: fall 6s linear infinite;
-  animation-delay: 0.5s;
-}
-
-body::before:nth-child(3) {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-color: #444;
-  border-radius: 50%;
-  top: -18px;
-  left: 45%;
-  animation: fall 5.5s linear infinite;
-  animation-delay: 1.5s;
-}
-
-body::before:nth-child(4) {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: -17px;
-  left: 80%;
-  animation: fall 6.5s linear infinite;
-  animation-delay: 0.8s;
 }
 
 .container {
   max-width: 800px;
   width: 100%;
   height: auto;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5); /* A slight dark background to let content pop */
-  border-radius: 8px;
+}
+
+h1, .subtitle {
+  text-align: center;
+  color: #D100D1; /* Neon Purple */
+  text-shadow: 2px 2px 4px #000;
 }
 
 h1 {
-  text-align: center;
-  font-size: 40px;
+  font-size: 36px;
   margin-bottom: 30px;
-  color: #ff007f; /* Bright Pink */
 }
 
 #filters {
@@ -118,6 +38,8 @@ h1 {
 #filters input {
   margin: 0 10px;
   padding: 5px;
+  border: 2px solid #D100D1; /* Neon Purple */
+  background-color: #000;
 }
 
 .article {
@@ -125,263 +47,110 @@ h1 {
   max-width: 600px; 
   margin-left: auto;
   margin-right: auto;
-  background-color: #351f39; /* Dark Purple */
+  background-color: #121212;
+  border: 1px solid #D100D1;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px #D100D1; /* Neon Purple Shadow */
 }
 
 .article h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #ffb6c1; /* Light Pink */
+  color: #D100D1; /* Neon Purple */
   margin-top: -5px;
-overflow-wrap: break-word;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .article p {
   font-style: italic;
-  margin-bottom: 5px;
-  color: #bbb;
+  color: #888;
 }
 
 .article .description {
-  margin-bottom: 15px;
   font-size: 16px;
   line-height: 1.4;
-  color: #ffb6c1; /* Light Pink */
+  color: #D100D1; /* Neon Purple */
 }
 
-.article .read-more {
-  display: inline-block;
-  background-color: #444;
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 4px;
+.article .read-more, .article .fact-check {
+  background-color: #D100D1; /* Neon Purple */
+  color: #000;
   transition: background-color 0.3s ease;
 }
 
-.article .read-more:hover {
-  background-color: #666;
+.article .read-more:hover, .article .fact-check:hover {
+  background-color: #B300B3;
 }
 
-.article .read-more:focus {
+.article .read-more:focus, .article .fact-check:focus {
   outline: none;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #444;
+  box-shadow: 0 0 0 3px #D100D1, 0 0 0 6px #000; /* Neon Purple Focus */
 }
 
-.article-link {
-  color: #add8e6;
-}
-
-.subtitle {
-  text-align: center; /* Centrer le sous-titre */
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #fff;
+.article-link, .github-link {
+  color: #D100D1; /* Neon Purple */
 }
 
 .github-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffdd57; /* Gold */
-  text-decoration: none;
-  margin-top: 20px;
 }
 
 .github-link svg {
   margin-right: 8px;
+  fill: #D100D1; /* Neon Purple SVG */
 }
-
-.article {
-  position: relative;
-}
-
-.favicon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 16px;
-  height: 16px;
-  margin: 8px;
-}
-
-
 
 .thumbnail {
   max-width: 100%;
   max-height: 300px;
-  display: block;
   margin-bottom: -10px;
   margin-top: -2px;
 }
 
-.article .fact-check {
-  display: inline-block;
-  background-color: #444;
-  color: #fff;
-  text-decoration: none;
-  padding: 2px 2px; /* reduced padding to make the button smaller */
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  margin-left: 5px; /* add some margin to the left to create space between the article link and the button */
-}
-
-.article .fact-check:hover {
-  background-color: #777;
-}
-
-.article .fact-check:focus {
-  outline: none;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #444;
-}
-
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 30px;
-  }
-
-  .article {
-    max-width: 100%; 
-  }
-  
-  .article h2 {
-    font-size: 20px;
-  }
-
-  .article .description {
-    font-size: 14px;
-  }
-
-  .article .read-more {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-}
-
-
-
-
-/* Mobile Styles */
-@media (max-width: 425px) {
-  .container {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-
-  .subtitle {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .article {
-    margin-bottom: 20px;
-    padding: 15px;
-	max-width: 100%;
-  }
-
-  .article h2 {
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
-
-  .article p {
-    font-size: 12px;
-    margin-bottom: 3px;
-  }
-
-  .article .description {
-    font-size: 14px;
-  }
-
-  .article .read-more {
-    font-size: 12px;
-    padding: 6px 10px;
-  }
-
-  .github-link {
-    margin-top: 15px;
-  }
-}
-
-
 .progress-container {
-  width: 100%;
-  height: 20px;
-  background-color: #f3f3f3;
+  background-color: #222;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .progress-bar {
-  height: 100%;
-  width: 0%;
-  background-color: #4caf50;
+  background-color: #D100D1; /* Neon Purple */
   transition: width 0.5s;
 }
 
-
 .keyword-inputs {
-    margin-bottom: 20px;
-    text-align: center;
+  text-align: center;
 }
 
 .keyword-inputs label {
-    font-size: 16px;
-    margin-right: 10px;
+  color: #D100D1; /* Neon Purple */
 }
 
-.keyword-inputs input {
-    width: 80%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #888;
-    background-color: #222;
-    color: #fff;
+.keyword-inputs input, .keyword-inputs button {
+  border: 2px solid #D100D1; /* Neon Purple */
+  background-color: #000;
 }
 
 .keyword-inputs button {
-    padding: 7px 15px;
-    margin: 5px;
-    border: none;
-    border-radius: 4px;
-    background-color: #ff007f; /* Bright Pink */
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 
 .keyword-inputs button:hover {
-    background-color: #ffaf00; /* Bright Orange */
-}
-
-.keyword-inputs button:active {
-    background-color: #003580;
+  background-color: #B300B3;
 }
 
 #article-counter {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 5px;
-	margin-bottom: 5px;
+  color: #D100D1; /* Neon Purple */
 }
 
 .fact-check img {
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    filter: grayscale(80%); /* Makes the image black and white */
-    transition: filter 0.3s; /* Smooth transition for hover effect */
+  filter: brightness(2); /* Brightens the image */
+  transition: filter 0.3s;
 }
 
-.fact-check:hover img, .fact-check:active img {
-    filter: grayscale(0%); /* Reverts the image to its original colors on hover and click */
+.fact-check:hover img {
+  filter: brightness(1); /* Reverts the brightness on hover */
 }
