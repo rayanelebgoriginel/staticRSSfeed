@@ -22,6 +22,8 @@ h1 {
   text-align: center;
   font-size: 36px;
   margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
 }
 
 #filters {
@@ -37,7 +39,7 @@ h1 {
 
 .article {
   margin-bottom: 30px;
-  max-width: 600px; 
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   background-color: #222;
@@ -50,8 +52,9 @@ h1 {
   font-size: 24px;
   margin-bottom: 10px;
   color: #fff;
+  text-shadow: 2px 2px 4px #000;
   margin-top: -5px;
-overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .article p {
@@ -65,6 +68,7 @@ overflow-wrap: break-word;
   font-size: 16px;
   line-height: 1.4;
   color: #fff;
+  text-shadow: 2px 2px 4px #000;
 }
 
 .article .read-more {
@@ -91,10 +95,11 @@ overflow-wrap: break-word;
 }
 
 .subtitle {
-  text-align: center; /* Centrer le sous-titre */
+  text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
   color: #fff;
+  text-shadow: 2px 2px 4px #000;
 }
 
 .github-link {
@@ -123,8 +128,6 @@ overflow-wrap: break-word;
   margin: 8px;
 }
 
-
-
 .thumbnail {
   max-width: 100%;
   max-height: 300px;
@@ -138,10 +141,10 @@ overflow-wrap: break-word;
   background-color: #444;
   color: #fff;
   text-decoration: none;
-  padding: 2px 2px; /* reduced padding to make the button smaller */
+  padding: 2px 2px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
-  margin-left: 5px; /* add some margin to the left to create space between the article link and the button */
+  margin-left: 5px;
 }
 
 .article .fact-check:hover {
@@ -153,16 +156,15 @@ overflow-wrap: break-word;
   box-shadow: 0 0 0 1px #fff, 0 0 0 2px #444;
 }
 
-
 @media (max-width: 768px) {
   h1 {
     font-size: 30px;
   }
 
   .article {
-    max-width: 100%; 
+    max-width: 100%;
   }
-  
+
   .article h2 {
     font-size: 20px;
   }
@@ -177,10 +179,7 @@ overflow-wrap: break-word;
   }
 }
 
-
-
-
-/* Mobile Styles */
+/* Styles pour les appareils mobiles */
 @media (max-width: 425px) {
   .container {
     padding: 10px;
@@ -199,7 +198,7 @@ overflow-wrap: break-word;
   .article {
     margin-bottom: 20px;
     padding: 15px;
-	max-width: 100%;
+    max-width: 100%;
   }
 
   .article h2 {
@@ -226,7 +225,6 @@ overflow-wrap: break-word;
   }
 }
 
-
 .progress-container {
   width: 100%;
   height: 20px;
@@ -242,61 +240,61 @@ overflow-wrap: break-word;
   transition: width 0.5s;
 }
 
-
 .keyword-inputs {
-    margin-bottom: 20px;
-    text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .keyword-inputs label {
-    font-size: 16px;
-    margin-right: 10px;
+  font-size: 16px;
+  margin-right: 10px;
 }
 
 .keyword-inputs input {
-    width: 80%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #888;
-    background-color: #222;
-    color: #fff;
+  width: 80%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #888;
+  background-color: #222;
+  color: #fff;
 }
 
 .keyword-inputs button {
-    padding: 7px 15px;
-    margin: 5px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.2s;
+  padding: 7px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .keyword-inputs button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .keyword-inputs button:active {
-    background-color: #003580;
+  background-color: #003580;
 }
 
 #article-counter {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 5px;
-	margin-bottom: 5px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .fact-check img {
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    filter: grayscale(80%); /* Makes the image black and white */
-    transition: filter 0.3s; /* Smooth transition for hover effect */
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  filter: grayscale(80%);
+  transition: filter 0.3s;
 }
 
-.fact-check:hover img, .fact-check:active img {
-    filter: grayscale(0%); /* Reverts the image to its original colors on hover and click */
+.fact-check:hover img,
+.fact-check:active img {
+  filter: grayscale(0%);
 }
