@@ -1,13 +1,17 @@
 @keyframes fall {
   0% {
-    transform: translateY(-10%);
+    transform: translateY(-10%) translateX(0);
     opacity: 0.5;
   }
+  50% {
+    transform: translateY(50%) translateX(10px);
+  }
   100% {
-    transform: translateY(110%);
-    opacity: 1;
+    transform: translateY(110%) translateX(-10px);
+    opacity: 0.8;
   }
 }
+
 
 body {
   font-family: 'Chilanka', cursive; /* A fun, more stylized font */
@@ -20,6 +24,8 @@ body {
   height: 100%;
   position: relative; /* Relative positioning for adding the falling balls */
   overflow: hidden; /* Hide balls that go outside of the viewport */
+  overflow-x: hidden; 
+  overflow-y: auto; 
 }
 
 /* Adding the falling balls */
