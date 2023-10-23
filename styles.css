@@ -1,7 +1,7 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #000;
-  color: #D100D1; /* Neon Purple */
+  color: #9f00e8; /* Neon purple color for text */
   margin: 0;
   padding: 0;
   display: block;
@@ -16,19 +16,13 @@ body {
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #1A1A1A;
-  border: 1px solid #D100D1; /* Neon Purple */
+  border: 2px solid #9f00e8; /* Neon purple border */
 }
 
 h1, .subtitle {
   text-align: center;
-  color: #D100D1; /* Neon Purple */
-  text-shadow: 2px 2px 4px #000;
-}
-
-h1 {
-  font-size: 36px;
   margin-bottom: 30px;
+  color: #9f00e8;
 }
 
 #filters {
@@ -40,134 +34,106 @@ h1 {
 #filters input {
   margin: 0 10px;
   padding: 5px;
-  border: 2px solid #D100D1; /* Neon Purple */
-  background-color: #1A1A1A;
+  border: 1px solid #9f00e8; /* Neon purple border for input */
+  background-color: #1a1a1a; /* Slightly brighter than the main background */
+  color: #9f00e8;
 }
 
 .article {
   margin-bottom: 30px;
-  max-width: 600px;
+  max-width: 600px; 
   margin-left: auto;
   margin-right: auto;
-  background-color: #1A1A1A;
-  border: 1px solid #D100D1;
+  background-color: #1a1a1a;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 0 10px #D100D1; /* Neon Purple Shadow */
+  box-shadow: 0 2px 4px #9f00e8; /* Neon purple shadow */
 }
 
-.article h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #D100D1; /* Neon Purple */
-  margin-top: -5px;
-  text-shadow: 1px 1px 3px #000;
+.article h2, .article .description, .article-link, .github-link {
+  color: #9f00e8;
 }
 
 .article p {
   font-style: italic;
-  color: #888;
-}
-
-.article .description {
-  font-size: 16px;
-  line-height: 1.4;
-  color: #D100D1; /* Neon Purple */
+  margin-bottom: 5px;
+  color: #7d00b3; /* Darker shade of neon purple for lesser emphasis text */
 }
 
 .article .read-more, .article .fact-check {
-  background-color: #D100D1; /* Neon Purple */
-  color: #000;
-  text-decoration: none;
-  border-radius: 4px;
+  background-color: #9f00e8;
+  color: #000; /* Black text on neon purple background */
   transition: background-color 0.3s ease;
 }
 
 .article .read-more:hover, .article .fact-check:hover {
-  background-color: #B300B3;
+  background-color: #7d00b3; /* Darker shade of neon purple for hover state */
 }
 
 .article .read-more:focus, .article .fact-check:focus {
   outline: none;
-  box-shadow: 0 0 0 3px #D100D1, 0 0 0 6px #000; /* Neon Purple Focus */
-}
-
-.article-link, .github-link {
-  color: #D100D1; /* Neon Purple */
-  text-decoration: none;
-}
-
-.github-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 0 0 3px #1a1a1a, 0 0 0 6px #9f00e8; /* Neon purple focus ring */
 }
 
 .github-link svg {
-  margin-right: 8px;
-  fill: #D100D1; /* Neon Purple SVG */
+  fill: #9f00e8; /* Change SVG color to neon purple */
 }
 
 .thumbnail {
   max-width: 100%;
   max-height: 300px;
+  display: block;
   margin-bottom: -10px;
   margin-top: -2px;
 }
 
-.progress-container {
-  background-color: #222;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  background-color: #D100D1; /* Neon Purple */
-  transition: width 0.5s;
-}
-
 .keyword-inputs {
-  text-align: center;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.keyword-inputs label {
-  color: #D100D1; /* Neon Purple */
+.keyword-inputs label, #article-counter {
+    color: #9f00e8;
 }
 
-.keyword-inputs input, .keyword-inputs button {
-  border: 2px solid #D100D1; /* Neon Purple */
-  background-color: #1A1A1A;
+.keyword-inputs input {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #9f00e8; /* Neon purple border for input */
+    background-color: #1a1a1a; /* Slightly brighter than the main background */
+    color: #9f00e8;
 }
 
 .keyword-inputs button {
-  transition: background-color 0.2s;
+    padding: 7px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #9f00e8;
+    color: #000; /* Black text on neon purple background */
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .keyword-inputs button:hover {
-  background-color: #B300B3;
-}
-
-#article-counter {
-  color: #D100D1; /* Neon Purple */
+    background-color: #7d00b3; /* Darker shade of neon purple for hover state */
 }
 
 .fact-check img {
-  filter: brightness(2); /* Brightens the image */
-  transition: filter 0.3s;
+    filter: none; /* Let the image retain its original colors */
 }
 
-.fact-check:hover img {
-  filter: brightness(1); /* Reverts the brightness on hover */
-}
+/* Responsive styles remain largely unchanged but might adjust text sizes slightly */
 
-/* Mobile styles remain largely the same, but with neon purple adjustments */
 @media (max-width: 768px) {
   h1 {
     font-size: 30px;
   }
 
   .article {
-    max-width: 100%;
+    max-width: 100%; 
   }
 
   .article h2 {
@@ -227,4 +193,79 @@ h1 {
   .github-link {
     margin-top: 15px;
   }
+}
+
+.progress-container {
+  width: 100%;
+  height: 20px;
+  background-color: #2b2b2b; /* Dark gray background for progress bar container */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #9f00e8; /* Neon purple color for progress bar */
+  transition: width 0.5s;
+}
+
+
+
+.keyword-inputs {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.keyword-inputs label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.keyword-inputs input {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #888;
+    background-color: #222;
+    color: #fff;
+}
+
+.keyword-inputs button {
+    padding: 7px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.keyword-inputs button:hover {
+    background-color: #0056b3;
+}
+
+.keyword-inputs button:active {
+    background-color: #003580;
+}
+
+#article-counter {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.fact-check img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    filter: grayscale(80%); /* Makes the image black and white */
+    transition: filter 0.3s; /* Smooth transition for hover effect */
+}
+
+.fact-check:hover img, .fact-check:active img {
+    filter: grayscale(0%); /* Reverts the image to its original colors on hover and click */
 }
